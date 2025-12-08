@@ -194,17 +194,15 @@ GitHub Repository	Exists on GitHub cloud (remote)
 
 # Learn Git — Step-by-Step Guide (with Examples)
 
-*A compact README you can add to your GitHub repo. Starts from zero and goes to intermediate/advanced topics with hands-on examples.*
 
----
 
-## 🚀 Overview
+## Overview
 
 This guide teaches Git from first install to advanced workflows. Follow the examples in order. Each step includes commands you can copy/paste and small practice tasks.
 
 ---
 
-## 📦 Prerequisites
+##  Prerequisites
 
 * A computer (Windows / macOS / Linux)
 * Basic command-line familiarity (terminal / PowerShell)
@@ -249,75 +247,86 @@ Working Directory -> Staging Area -> Local Repo -> Remote Repo
 
 ## 3. Create First Repository (local)
 
-```bash
 mkdir my-first-git-project
+
 cd my-first-git-project
+
 git init
+
 echo "Hello Git" > hello.txt
+
 git status
+
 git add hello.txt
+
 git commit -m "Initial commit: add hello.txt"
+
 git log --oneline
-```
 
 *Practice:* create `notes.txt`, add text, `git add` and `git commit`.
-
----
 
 ## 4. Connect to GitHub (remote)
 
 1. Create a new repo on GitHub (no README required).
+   
 2. Link remote and push:
 
-```bash
 git remote add origin https://github.com/<your-username>/<repo-name>.git
+
 git branch -M main         # ensure branch name is main (optional)
+
 git push -u origin main
-```
+
 
 *To clone an existing repo:*
 
-```bash
 git clone https://github.com/<user>/<repo>.git
-```
-
----
 
 ## 5. Daily Commands Cheat Sheet
 
-```bash
 git status            # show file status
-git add <file>        # stage file
-git add .             # stage all changes
-git commit -m "msg"   # create a commit
-git push              # push local commits to remote
-git pull              # fetch + merge from remote
-git fetch             # fetch remote refs only
-git clone <url>       # copy a remote repo locally
-git log --oneline     # concise commit history
-```
 
----
+git add <file>        # stage file
+
+git add .             # stage all changes
+
+git commit -m "msg"   # create a commit
+
+git push              # push local commits to remote
+
+git pull              # fetch + merge from remote
+
+git fetch             # fetch remote refs only
+
+git clone <url>       # copy a remote repo locally
+
+git log --oneline     # concise commit history
+
 
 ## 6. Branching & Feature Workflow
 
 Create and switch:
 
-```bash
+
 git checkout -b feature/x   # create and switch
+
 # or
 git branch feature/x
+
 git checkout feature/x
-```
+
 
 Work and push:
 
-```bash
 # make changes...
+
 git add .
+
 git commit -m "feat: implement X"
+
 git push -u origin feature/x
-```
+
+
 
 Open a Pull Request on GitHub and merge via UI or locally:
 
@@ -326,9 +335,7 @@ git checkout main
 git pull origin main
 git merge feature/x
 git push origin main
-```
 
----
 
 ## 7. Merge Conflicts (short guide)
 
